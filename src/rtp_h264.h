@@ -1,6 +1,7 @@
 #ifndef RTP_ENCODER_H_
 #define RTP_ENCODER_H_
 
+#include <stdbool.h>
 #include <stdint.h>
 
 enum RTPH264Mode
@@ -64,5 +65,7 @@ int32_t rtp_h264_packetize_next(
 	struct RTPH264Packetization* packetization,
 	uint8_t* packet,
 	uint32_t time);
+
+bool rtp_h264_packetize_is_done(struct RTPH264Packetization* packetization);
 
 #endif

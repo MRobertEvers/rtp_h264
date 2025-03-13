@@ -80,14 +80,12 @@ main()
 			rtp_h264_packetize_begin(
 				&stream_info, &packetization, 1500, buf, read_len);
 
-			while( true )
+			while( !rtp_h264_packetize_is_done(&packetization) )
 			{
 				int packet_len = rtp_h264_packetize_next(
 					&stream_info, &packetization, packet, time);
 				if( packet_len < 0 )
 					return -1;
-				if( packet_len == 0 )
-					break;
 
 				int bytes_sent = sendto(
 					sock,

@@ -178,7 +178,11 @@ rtp_h264_packetize_begin(
 	uint32_t data_packet_size = RTP_H264_MAX_NAL_DATA_SIZE(mtu);
 
 	if( len < data_packet_size )
+	{
 		packetization->_mode = RTPH264_MODE_SINGLE_NAL_MODE;
+		packetization->_cu_pack_num = 0;
+		packetization->_fu_pack_num = 1;
+	}
 	else
 	{
 		packetization->_mode = RTPH264_MODE_FU_A_MODE;
@@ -202,13 +206,6 @@ rtp_h264_packetize_next(
 	uint32_t pkt_size = 0;
 	uint8_t* data = packetization->data;
 	uint32_t data_len = packetization->len;
-	if( packetization->_mode == RTPH264_MODE_SINGLE_NAL_MODE &&
-		packetization->_cu_pack_num != 0 )
-		return 0;
-	else if(
-		packetization->_mode == RTPH264_MODE_FU_A_MODE &&
-		packetization->_cu_pack_num == packetization->_fu_pack_num )
-		return 0;
 
 	pkt_size = rtp_encode(
 		packet,
@@ -225,4 +222,10 @@ rtp_h264_packetize_next(
 	stream->sequenceno += 1;
 
 	return pkt_size;
+}
+
+bool
+rtp_h264_packetize_is_done(struct RTPH264Packetization* packetization)
+{
+	return packetization->_cu_pack_num == packetization->_fu_pack_num;
 }

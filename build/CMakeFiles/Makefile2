@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/matthew/Documents/git_repos/rtpencoder/build
 
 # The main recursive "all" target.
 all: CMakeFiles/rtpencoder.dir/all
+all: CMakeFiles/rtpencoder2.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/rtpencoder.dir/clean
+clean: CMakeFiles/rtpencoder2.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,12 +83,12 @@ clean: CMakeFiles/rtpencoder.dir/clean
 CMakeFiles/rtpencoder.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles --progress-num=1,2 "Built target rtpencoder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles --progress-num=1,2,3 "Built target rtpencoder"
 .PHONY : CMakeFiles/rtpencoder.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/rtpencoder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rtpencoder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles 0
 .PHONY : CMakeFiles/rtpencoder.dir/rule
@@ -99,6 +101,32 @@ rtpencoder: CMakeFiles/rtpencoder.dir/rule
 CMakeFiles/rtpencoder.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/clean
 .PHONY : CMakeFiles/rtpencoder.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/rtpencoder2.dir
+
+# All Build rule for target.
+CMakeFiles/rtpencoder2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles --progress-num=4,5,6 "Built target rtpencoder2"
+.PHONY : CMakeFiles/rtpencoder2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/rtpencoder2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/rtpencoder2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles 0
+.PHONY : CMakeFiles/rtpencoder2.dir/rule
+
+# Convenience name for target.
+rtpencoder2: CMakeFiles/rtpencoder2.dir/rule
+.PHONY : rtpencoder2
+
+# clean rule for target.
+CMakeFiles/rtpencoder2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/clean
+.PHONY : CMakeFiles/rtpencoder2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

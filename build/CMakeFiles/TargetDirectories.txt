@@ -1,3 +1,4 @@
 /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/rtpencoder.dir
+/home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/rtpencoder2.dir
 /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/edit_cache.dir
 /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/rebuild_cache.dir

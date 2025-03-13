@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/matthew/Documents/git_repos/rtpencoder/src/main.c" "CMakeFiles/rtpencoder.dir/src/main.c.o" "gcc" "CMakeFiles/rtpencoder.dir/src/main.c.o.d"
-  "/home/matthew/Documents/git_repos/rtpencoder/src/rtp_h264.c" "CMakeFiles/rtpencoder.dir/src/rtp_h264.c.o" "gcc" "CMakeFiles/rtpencoder.dir/src/rtp_h264.c.o.d"
+  "/home/matthew/Documents/git_repos/rtpencoder/src/main2.c" "CMakeFiles/rtpencoder2.dir/src/main2.c.o" "gcc" "CMakeFiles/rtpencoder2.dir/src/main2.c.o.d"
+  "/home/matthew/Documents/git_repos/rtpencoder/src/rtpencoder.c" "CMakeFiles/rtpencoder2.dir/src/rtpencoder.c.o" "gcc" "CMakeFiles/rtpencoder2.dir/src/rtpencoder.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

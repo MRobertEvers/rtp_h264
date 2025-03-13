@@ -43,10 +43,21 @@ find_package(Threads REQUIRED)
 
 add_executable(rtpencoder
 	src/main.c
+	src/rtp_h264.c
 )
 
 set_target_properties(rtpencoder PROPERTIES
 	CXX_STANDARD 17
 	OUTPUT_NAME rtpencoder)
+
+
+add_executable(rtpencoder2
+	src/main2.c
+	src/rtpencoder.c
+)
+
+set_target_properties(rtpencoder2 PROPERTIES
+	CXX_STANDARD 17
+	OUTPUT_NAME rtpencoder2)
 
 

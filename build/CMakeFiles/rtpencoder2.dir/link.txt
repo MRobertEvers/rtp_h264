@@ -1,0 +1,1 @@
+/usr/bin/cc  -O0 -g -ffp-contract=off -g CMakeFiles/rtpencoder2.dir/src/main2.c.o CMakeFiles/rtpencoder2.dir/src/rtpencoder.c.o -o rtpencoder2 

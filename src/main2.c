@@ -416,7 +416,6 @@ encode_stream_pkt(
 {
 	uint8_t fu_pack_num; // FU-A total package number
 	uint8_t cu_pack_num; // FU-A current package number for processing
-	uint32_t pkt_offset = RTP_HDR_SIZE; // RTP pkt header offset
 	uint32_t pkt_size = 0;
 	uint32_t bytes_sent = 0;	// total sent bytes
 	uint32_t bytes_sent_cu = 0; // current package sent bytes

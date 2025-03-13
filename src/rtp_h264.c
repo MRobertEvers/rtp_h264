@@ -202,7 +202,12 @@ rtp_h264_packetize_next(
 	uint32_t pkt_size = 0;
 	uint8_t* data = packetization->data;
 	uint32_t data_len = packetization->len;
-	if( packetization->_cu_pack_num == packetization->_fu_pack_num )
+	if( packetization->_mode == RTPH264_MODE_SINGLE_NAL_MODE &&
+		packetization->_cu_pack_num != 0 )
+		return 0;
+	else if(
+		packetization->_mode == RTPH264_MODE_FU_A_MODE &&
+		packetization->_cu_pack_num == packetization->_fu_pack_num )
 		return 0;
 
 	pkt_size = rtp_encode(

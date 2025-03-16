@@ -7,7 +7,7 @@ endif()
 project(rtpencoder
 	LANGUAGES C
 )
-set(PROJECT_DESCRIPTION "ToriVision WebRTC Streamer")
+set(PROJECT_DESCRIPTION "Sample RTP Streamer")
 
 cmake_policy(SET CMP0065 NEW)
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
@@ -20,7 +20,6 @@ set(CMAKE_C_FLAGS_MODE "-O0 -g")
 set(CMAKE_CXX_FLAGS_MODE " -O0 -g")
 set(CMAKE_EXE_LINKER_FLAGS_MODE  "")
 
-# Buil/home/matthew/Documents/git_repos/duo-buildroot-sdk-original/ToriVision/ToriVisionStreamer/CMakeLists.txtd release mode if we're told to
 message(STATUS "Building for ${CMAKE_BUILD_TYPE}")
 if(${CMAKE_BUILD_TYPE} STREQUAL "Release")
 	set(CMAKE_C_FLAGS_MODE "-Os -s")
@@ -37,27 +36,15 @@ if(POLICY CMP0079)
 	cmake_policy(SET CMP0079 NEW)
 endif()
 
-
-
-find_package(Threads REQUIRED)
-
-add_executable(rtpencoder
-	src/main.c
+add_executable(sample
+	sample/main.c
 	src/rtp_h264.c
 )
 
-set_target_properties(rtpencoder PROPERTIES
+target_include_directories(sample PRIVATE ./include)
+
+set_target_properties(sample PROPERTIES
 	CXX_STANDARD 17
-	OUTPUT_NAME rtpencoder)
-
-
-add_executable(rtpencoder2
-	src/main2.c
-	src/rtpencoder.c
-)
-
-set_target_properties(rtpencoder2 PROPERTIES
-	CXX_STANDARD 17
-	OUTPUT_NAME rtpencoder2)
+	OUTPUT_NAME sample)
 
 

@@ -117,85 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named rtpencoder
+# Target rules for targets named sample
 
 # Build rule for target.
-rtpencoder: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtpencoder
-.PHONY : rtpencoder
+sample: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample
+.PHONY : sample
 
 # fast build rule for target.
-rtpencoder/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/build
-.PHONY : rtpencoder/fast
+sample/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/build
+.PHONY : sample/fast
 
-#=============================================================================
-# Target rules for targets named rtpencoder2
-
-# Build rule for target.
-rtpencoder2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtpencoder2
-.PHONY : rtpencoder2
-
-# fast build rule for target.
-rtpencoder2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/build
-.PHONY : rtpencoder2/fast
-
-src/main.o: src/main.c.o
-.PHONY : src/main.o
+sample/main.o: sample/main.c.o
+.PHONY : sample/main.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/src/main.c.o
-.PHONY : src/main.c.o
+sample/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/sample/main.c.o
+.PHONY : sample/main.c.o
 
-src/main.i: src/main.c.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/src/main.c.i
-.PHONY : src/main.c.i
-
-src/main.s: src/main.c.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/src/main.c.s
-.PHONY : src/main.c.s
-
-src/main2.o: src/main2.c.o
-.PHONY : src/main2.o
-
-# target to build an object file
-src/main2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/src/main2.c.o
-.PHONY : src/main2.c.o
-
-src/main2.i: src/main2.c.i
-.PHONY : src/main2.i
+sample/main.i: sample/main.c.i
+.PHONY : sample/main.i
 
 # target to preprocess a source file
-src/main2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/src/main2.c.i
-.PHONY : src/main2.c.i
+sample/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/sample/main.c.i
+.PHONY : sample/main.c.i
 
-src/main2.s: src/main2.c.s
-.PHONY : src/main2.s
+sample/main.s: sample/main.c.s
+.PHONY : sample/main.s
 
 # target to generate assembly for a file
-src/main2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/src/main2.c.s
-.PHONY : src/main2.c.s
+sample/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/sample/main.c.s
+.PHONY : sample/main.c.s
 
 src/rtp_h264.o: src/rtp_h264.c.o
 .PHONY : src/rtp_h264.o
 
 # target to build an object file
 src/rtp_h264.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/src/rtp_h264.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/src/rtp_h264.c.o
 .PHONY : src/rtp_h264.c.o
 
 src/rtp_h264.i: src/rtp_h264.c.i
@@ -203,7 +166,7 @@ src/rtp_h264.i: src/rtp_h264.c.i
 
 # target to preprocess a source file
 src/rtp_h264.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/src/rtp_h264.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/src/rtp_h264.c.i
 .PHONY : src/rtp_h264.c.i
 
 src/rtp_h264.s: src/rtp_h264.c.s
@@ -211,32 +174,8 @@ src/rtp_h264.s: src/rtp_h264.c.s
 
 # target to generate assembly for a file
 src/rtp_h264.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder.dir/build.make CMakeFiles/rtpencoder.dir/src/rtp_h264.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/src/rtp_h264.c.s
 .PHONY : src/rtp_h264.c.s
-
-src/rtpencoder.o: src/rtpencoder.c.o
-.PHONY : src/rtpencoder.o
-
-# target to build an object file
-src/rtpencoder.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/src/rtpencoder.c.o
-.PHONY : src/rtpencoder.c.o
-
-src/rtpencoder.i: src/rtpencoder.c.i
-.PHONY : src/rtpencoder.i
-
-# target to preprocess a source file
-src/rtpencoder.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/src/rtpencoder.c.i
-.PHONY : src/rtpencoder.c.i
-
-src/rtpencoder.s: src/rtpencoder.c.s
-.PHONY : src/rtpencoder.s
-
-# target to generate assembly for a file
-src/rtpencoder.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtpencoder2.dir/build.make CMakeFiles/rtpencoder2.dir/src/rtpencoder.c.s
-.PHONY : src/rtpencoder.c.s
 
 # Help Target
 help:
@@ -246,20 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... rtpencoder"
-	@echo "... rtpencoder2"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/main2.o"
-	@echo "... src/main2.i"
-	@echo "... src/main2.s"
+	@echo "... sample"
+	@echo "... sample/main.o"
+	@echo "... sample/main.i"
+	@echo "... sample/main.s"
 	@echo "... src/rtp_h264.o"
 	@echo "... src/rtp_h264.i"
 	@echo "... src/rtp_h264.s"
-	@echo "... src/rtpencoder.o"
-	@echo "... src/rtpencoder.i"
-	@echo "... src/rtpencoder.s"
 .PHONY : help
 
 

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/matthew/Documents/git_repos/rtpencoder/./include
 
 C_FLAGS =  -O0 -g -ffp-contract=off -g -fPIE
 

@@ -1,8 +1,21 @@
--DCMAKE_BUILD_TYPE=Debug
+# RTP H264 packetizer
 
+Converts raw H264 units to RTP packets.
 
-ffplay  -i h264.sdp -protocol_whitelist rtp,file,udp
+## Build Sample
 
+```
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Debug
 
-ffmpeg -re -i test.264 -c:v libx264 -preset ultrafast -f rtp rtp://127.0.0.1:6000
-ffmpeg -re -i Big_Buck_Bunny_1080_10s_5MB.mp4 -c:v libx264 -preset ultrafast -f rtp rtp://127.0.0.1:6000
+make
+```
+
+## Sample Usage
+
+The sample streams RTP packets over UDP on port 6000.
+
+```
+ffplay  -i sample/h264.sdp -protocol_whitelist rtp,file,udp
+```

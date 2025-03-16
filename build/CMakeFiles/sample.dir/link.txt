@@ -1,0 +1,1 @@
+/usr/bin/cc  -O0 -g -ffp-contract=off -g CMakeFiles/sample.dir/sample/main.c.o CMakeFiles/sample.dir/src/rtp_h264.c.o -o sample 

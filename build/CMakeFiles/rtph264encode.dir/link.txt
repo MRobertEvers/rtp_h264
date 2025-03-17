@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -O0 -g -ffp-contract=off -g -shared -Wl,-soname,librtph264encode.so -o librtph264encode.so CMakeFiles/rtph264encode.dir/src/rtp_h264.c.o 

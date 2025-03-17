@@ -48,3 +48,9 @@ set_target_properties(sample PROPERTIES
 	OUTPUT_NAME sample)
 
 
+add_library(
+        rtph264encode
+        SHARED
+        src/rtp_h264.ctarget_link_libraries
+)
+target_include_directories(rtph264encode PRIVATE ./include)

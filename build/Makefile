@@ -129,6 +129,19 @@ sample/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/build
 .PHONY : sample/fast
 
+#=============================================================================
+# Target rules for targets named rtph264encode
+
+# Build rule for target.
+rtph264encode: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rtph264encode
+.PHONY : rtph264encode
+
+# fast build rule for target.
+rtph264encode/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtph264encode.dir/build.make CMakeFiles/rtph264encode.dir/build
+.PHONY : rtph264encode/fast
+
 sample/main.o: sample/main.c.o
 .PHONY : sample/main.o
 
@@ -159,6 +172,7 @@ src/rtp_h264.o: src/rtp_h264.c.o
 # target to build an object file
 src/rtp_h264.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/src/rtp_h264.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtph264encode.dir/build.make CMakeFiles/rtph264encode.dir/src/rtp_h264.c.o
 .PHONY : src/rtp_h264.c.o
 
 src/rtp_h264.i: src/rtp_h264.c.i
@@ -167,6 +181,7 @@ src/rtp_h264.i: src/rtp_h264.c.i
 # target to preprocess a source file
 src/rtp_h264.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/src/rtp_h264.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtph264encode.dir/build.make CMakeFiles/rtph264encode.dir/src/rtp_h264.c.i
 .PHONY : src/rtp_h264.c.i
 
 src/rtp_h264.s: src/rtp_h264.c.s
@@ -175,6 +190,7 @@ src/rtp_h264.s: src/rtp_h264.c.s
 # target to generate assembly for a file
 src/rtp_h264.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sample.dir/build.make CMakeFiles/sample.dir/src/rtp_h264.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rtph264encode.dir/build.make CMakeFiles/rtph264encode.dir/src/rtp_h264.c.s
 .PHONY : src/rtp_h264.c.s
 
 # Help Target
@@ -185,6 +201,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... rtph264encode"
 	@echo "... sample"
 	@echo "... sample/main.o"
 	@echo "... sample/main.i"

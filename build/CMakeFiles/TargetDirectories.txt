@@ -1,3 +1,4 @@
 /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/sample.dir
+/home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/rtph264encode.dir
 /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/edit_cache.dir
 /home/matthew/Documents/git_repos/rtpencoder/build/CMakeFiles/rebuild_cache.dir
